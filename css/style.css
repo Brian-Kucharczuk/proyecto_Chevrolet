@@ -1,0 +1,825 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root{
+    font-size: 16px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    font-family: Roboto,Helvetica,NanumGothic,sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    min-height: 100vh;
+}
+    /*? GRID */
+/* definiendo los nombres de las areas */
+/* header{
+    grid-area: header;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:steelblue;
+} */
+main{
+    grid-area: main;
+    
+    /* padding: 2rem; */
+    /* background-color:thistle; */
+}
+
+nav{
+    grid-area: nav;
+    
+    display: grid;
+    grid-template-areas: 
+    ". . ." 
+    "hamburger navlogo login"
+    ". ul .";
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows:  auto auto auto;
+    width: 100%;
+    top: 0;
+    padding: 1rem 0;
+    position: absolute;
+    z-index: 1000;
+    background-color: whitesmoke;
+}
+nav ul{ /* esto es mi ul del menu hamburgesa*/
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: flex-start; 
+    padding: 0 20px;
+    margin: auto;
+}
+nav ul li{
+    display: flex;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    list-style: none;
+    align-items: center;
+}
+nav ul li a{
+    display: flex;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    list-style: none;
+    align-items: center;
+}
+/* nav de las paginas no index*/
+nav.nav2{
+    position: static;
+}
+/*? LISTA DESPLEGABLE  */
+.lista-desplegable{ /* esto es mi lista debajo del logo*/
+    grid-area: ul;
+    
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: flex-start; 
+    padding: 0 20px;
+    margin: auto;
+}
+.lista-desplegable ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: flex-start; 
+    padding: 0 20px;
+}
+.lista-desplegable ul li{
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+.lista-desplegable ul li a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+    transition: all 0.3s ease;
+    position: relative;
+}
+.lista-desplegable ul li a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Ajusta este valor para mover la línea hacia arriba o hacia abajo */
+    height: 2px; /* Aumenta este valor para hacer la línea más gruesa */
+    width: 100%;
+    background-color: gold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade un difuminado a la línea */
+}
+    /*? LOGO */
+.logo-container {
+    grid-area: navlogo;
+    font-size: 1.5rem;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+.navlogo img{
+    background-color:transparent;
+    padding: 5px;
+}
+.navlogo img:hover{
+    transform: scale(1.05);
+    filter: drop-shadow(0px 0px 1px rgb(0, 0, 0, 0.5)); /* Agrega una sombra */
+    transition: transform 0.4s ease, filter 0.6s ease;
+}
+
+.login {
+    grid-area: login;
+    justify-self: end;
+    align-items: center;
+}
+
+#login-button {
+    background-color: transparent; /* Elimina el color de fondo */
+    position:static;
+    border: none; /* Elimina el borde */
+    font-size: 1.5rem; /* Ajusta el tamaño del texto */
+    color: #000; /* Ajusta el color del texto */
+    cursor: pointer; /* Cambia el cursor a un puntero cuando se pasa por encima*/
+    border-radius: 50%; /* Hace que el botón sea redondo */
+    padding: 10px; /* Añade un poco de espacio alrededor del texto */
+}
+#login-button a:hover {
+    color: goldenrod; /* Cambia el color del texto cuando se pasa por encima */
+    transition: color 0.5s ease;
+}
+#login-button a{
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0 2rem;
+    text-decoration: none;
+    color: black; /** es el color del font*/
+}
+
+    /*? CONTENIDO INICIO*/
+.inicio-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "inicio";
+        gap: 0px;
+}
+    
+.texto-inicio {
+    position: absolute;
+    font-family: Louis,Tahoma,NotoSansKR,NanumGothic,sans-serif;
+    color: #fff;
+    top: 20%;
+    text-align: center;
+    z-index: 2;
+}
+.texto-inicio h1 {
+    text-align: center;
+    font-size: 4rem;
+    line-height: 3rem;
+    font-weight: 900;
+    letter-spacing: .3rem;
+    color: #fff;
+    padding-top: 0.3rem;
+    margin-bottom: 0;
+}
+.texto-inicio h2 {
+    font-size: 1.3rem;
+    line-height: 1.333rem;
+    margin-bottom: 0rem;
+    padding-top: 0rem;
+    font-style: inherit;
+    font-weight: 500;
+    letter-spacing: .15rem;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+.texto-inicio p {
+    font-size: 1.5rem;
+    line-height: 1.333rem;
+    margin-bottom: 0rem;
+    padding-top: 1rem;
+    font-style: inherit;
+    font-weight: 400;
+    letter-spacing: .15rem;
+    margin: 0;
+}
+    
+.imagen-inicio {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+    
+.imagen-inicio img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+}
+
+/*? OTRO OVERLAY  */
+.camionetas{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.camionetas p{
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: #fff;
+}
+.camionetas .item-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 2rem;
+}
+.camionetas .item-container .camioneta-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1rem 3rem;
+    transition: all 0.3s ease;
+}
+.camionetas .item-container .camioneta-item p {
+    font-size: 1.4rem;
+}
+.p-silverado,
+.p-silverado-hd,
+.p-colorado {
+    flex: 1;
+}
+.p-silverado + button,
+.p-silverado-hd + button,
+.p-colorado + button {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.p-silverado + button:hover,
+.p-silverado-hd + button:hover,
+.p-colorado + button:hover {
+    background-color: green;
+    border: 1px solid black;
+    color: white;
+}
+.vermas-overlay {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Cambia el último valor para ajustar la transparencia */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    height: 20%;
+/* para el efecto */
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/*? CARD */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f8f8f8;
+    
+} 
+.tab {
+    padding: 10px;
+    cursor: pointer;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #f8f8f8;
+}
+.buttons button {
+    padding: 10px 20px;
+}
+
+
+    /*? CARS TAB */
+.cars-tab {
+    background-color: #f5f5f5;
+}
+
+.floating-tab ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem;
+}
+.floating-tab ul li {
+    margin-right: 1rem;
+}
+.floating-images img{
+   max-width: 100%;
+   height: auto;
+}
+.floating-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+.floating-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+    /*? NOTICIAS */
+    .noticias h2 {
+        text-align: center;
+    }
+
+.notices-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Sobre Nosotros */
+
+.titulo{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.titulo h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    box-shadow: rgba(255, 209, 27, 0.922) 0px 5px 15px;
+}
+
+.historia{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.historia p{
+    font-size: 20px;
+    padding: 10px;
+}
+
+.vehiculo-subtitulo{
+    padding: 15px;
+}
+
+.vehiculos{
+    display: flex;
+    /* justify-content: center; */
+}
+
+.card-body{
+    padding: 15px;
+}
+
+.card-body h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 1500;
+    text-decoration: underline 3px rgba(255, 209, 27, 0.922);
+}
+
+.card-body a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    border: 2px solid rgb(68, 68, 68);
+    text-decoration: none;
+    color: black;
+}
+
+.card-body a:hover{
+    cursor: pointer;
+    background-color: rgba(255, 209, 27, 0.922);
+    color: black;
+    font-weight: 600;
+}
+
+/* Titulos e informacion de cada auto */
+
+.titulo2{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.titulo2 h1{
+    display: flex;
+    font-size: 60px;
+    box-shadow: rgba(255, 209, 27, 0.922) 0px 5px 15px;
+}
+
+.img-autos{
+    display: flex;
+    width: 1280px ;
+    height: 430px;
+}
+
+.img-autos img{
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+
+.img-autos img:hover{
+    cursor: crosshair;
+    width: 450px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+
+.info-autos{
+    display: flex;
+}
+
+.info{
+    padding: 10px;
+    font-size: 25px;
+}
+
+.info h2{
+    padding-top: 25px;
+}
+
+.info h2 span{
+    color: BLACK;
+    text-decoration: 5px underline solid rgba(255, 209, 27, 0.922) ;
+
+}
+
+.info span{
+    color:rgb(255, 183, 0);
+}
+
+.info h4{
+    padding-top: 10px;
+    padding-bottom: 25px;
+}
+
+.info a{
+    display: flex;
+    text-decoration: none;
+    border: 4px solid black;
+    color: black;
+    padding: 15px;
+    justify-content: center;
+    max-width: 350px;
+}
+
+.formulario-redirect{
+    display: flex;
+    justify-content: center;
+}
+
+.info a:hover{
+    cursor: pointer;
+    background-color: rgba(255, 209, 27, 0.922);
+    color: black;
+    font-weight: 600;
+}
+
+/* Formulario CSS */
+
+.formu2{
+    background-color: black;
+    color: white;
+    max-width: 600px;
+    width: 90%;
+	margin: auto;
+	padding: 40px;	
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(255,193,7);
+    border-radius: 25px;
+    box-shadow: 3px 0 20px  rgb(154, 168, 168);
+    padding-top: 10px;
+}
+
+.caja-formulario{
+    padding-top: 100px;
+    background-color: rgba(99, 100, 100, 0.819);
+}
+
+#footer{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+} 
+
+ #footer a {
+    color: black;
+    font-weight: 1200;
+    cursor: pointer; 
+    font-size: 18px;
+    padding-left: 15px;  
+    text-decoration: none; 
+}
+
+#footer a:hover{
+    text-decoration: underline;
+    color: rgb(154, 168, 168);
+}
+
+
+#footer i{
+    margin: 3% 1% ;
+    
+}
+
+
+.formulario{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    
+}
+
+
+.form-control{
+    position: relative;
+}
+
+.form-control-input{
+    width: 100%; 
+    border: 4px solid rgb(255,193,7);
+    border-radius: 25px ;
+    height: 45px;
+    line-height: 45px; 
+    padding: 0 40px 0 10px;
+    transition: .3s ease all;
+    justify-content: center; 
+}
+
+.form-control-input:focus{
+    border: 3px solid  rgb(154, 168, 168);
+    outline: none;
+    box-shadow: 3px 0 30px  rgb(154, 168, 168);
+}
+
+
+.form-control-coment{
+    position: relative;
+    width: 100%;
+    border: 4px solid rgb(255,193,7);
+    border-radius: 25px ;
+    height: 150px; 
+    line-height: 45px;
+    padding: 0 40px 0 10px;
+    transition: .3s ease all;
+}
+
+.form-control-coment:focus{
+    border: 3px solid  rgb(154, 168, 168);
+    outline: none;
+    box-shadow: 3px 0 30px  rgb(154, 168, 168);
+}
+
+.form-control-error{
+    font-size: 12px;
+    margin-bottom: 0;
+    display: none;
+
+}
+
+.form-control-error-activo{
+    display: block;
+}
+
+.form-control-model{
+    background-color: black;
+    border: 4px solid rgb(255,193,7);
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    padding: 10px 0px 10px 50px;  
+}
+
+.form-control-select {
+    border: 3px solid rgb(255, 193,7);
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.form-control-select:focus{
+    border: 3px solid  rgb(154, 168, 168);
+    outline: none;
+    box-shadow: 3px 0 30px  rgb(154, 168, 168);
+}
+
+
+.form-control-img{
+    border: 4px solid rgb(255,193,7);
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    padding: 10px 0px 10px 50px;  
+}
+
+.img{
+    cursor: pointer;
+}
+
+.form-control-validacion{
+    position: absolute;
+    right: 10px; 
+    bottom: 15px; 
+    z-index: 100; 
+    font-size: 16px;
+    opacity: 0;
+}
+
+.form-control-check{
+    color: white;
+    margin: 10px;
+    justify-self: center;
+}
+
+
+.form-control-enviar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    font-weight: bold; 
+    line-height: 45px;
+    width: 100px; 
+    background-color:rgb(154, 168, 168) ;
+    color: black;
+    font-weight: bold;
+    border: 3px solid rgb(154, 168, 168);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s ease all;
+      
+}
+
+.form-control-enviar:hover{
+    box-shadow: 3px 0px 30px rgb(255,193,7);
+}
+
+.form-control-msj{
+    height: 45px;
+    line-height: 45px; 
+    padding:  0 15px;
+    border-radius: 3px;
+    display: none;
+    color: white;
+    font-size: 20px;
+    box-shadow: 3px 0 3px;
+}
+
+.form-control-msj-activo {
+    display: block;
+}
+
+
+/* Validación */
+.form-control-correcto.form-control-validacion{
+    color: blue;
+    opacity: 1;
+}
+
+
+.form-control-incorrecto.form-control-input{
+    border:3px solid red;
+}
+
+.form-control-incorrecto.form-control-validacion{
+    color: red;
+    opacity: 1;
+}
+
+
+
+/* Mediaquery */
+
+@media screen and (max-width: 800px){
+    .formulario{
+        grid-template-columns: 1fr;
+    }
+    
+    .form-control-check,.form-control-msj,.form-control-input{
+        grid-column: 1;
+    }
+
+    .form-control-enviar{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*? ejemplo de MEDIA QUERYS */
+/** para hacer el layout responsive */
+@media (max-width:1024px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto minmax (5rem,auto) 1fr minmax(5rem, auto) auto;
+        grid-template-areas:
+        "header"
+        "nav"
+        "content"
+        "sidebar" ;
+    }
+}
+
+
+/*? explicacion media query: estable nuevos estilos cuando el ancho de la pantalla sea inferior a 1024px, solo vamos a ocupar una columna cuando la pantalla sea pequenia, por lo que cambiaremos las "grid-template-columns" en la clase contenedor a 1fr. Luego queremos que cada elemento tenga su propia fila y cada fila tendra diferentes requisitos de tamanio por lo que necesitamos declarar 5 valores en "grid-template-rows". La primer fila es para el 'header' y se configurara en 'auto', que ajustara la altura segun el contenido dentro del 'header'. La segunda fila es para el 'nav' y usa 'minmax' para establecer un valor minimo y maximo. En este caso,el tamanio minimo es 5rem y el maximo auto, lo que le permite al contenedor utilizar todo el espacio que necesita para llenar el contenido de adentro. La tercer columna es para nuestro contenido y utiliza 1fr(que se calcula por cuanto espacio queda sin utilizar en la pagina). y se ajustara dependiendo cuanto contenido haya adentro. La cuarta fila es para nuestro 'sidebar' y */
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto minmax (5rem,auto) 1fr minmax(5rem, auto) auto;
+        grid-template-areas:
+        "header"
+        "nav"
+        "content"
+        "sidebar" ;
+    }
+}
+
+
+/*? MEDIA QUERYS */
+/* texto responsive */
+@media (min-width: 600px) {
+    html{
+        font-size: 100%;
+    }
+}
+/* Oculta menú en pantallas de hasta 768px de ancho */
+@media (max-width: 768px) { 
+    nav ul {
+        display: none;
+    }
+}
