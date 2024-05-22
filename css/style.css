@@ -1,175 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-:root{
-    font-size: 16px;
-}
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body{
-    font-family: Roboto,Helvetica,NanumGothic,sans-serif;
-    /* font-family: 'Poppins', sans-serif; */
-    min-height: 100vh;
-}
-    /*? GRID */
-/* definiendo los nombres de las areas */
-/* header{
-    grid-area: header;
-    
+
+.nav-bar{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    background-color:steelblue;
-} */
-main{
-    grid-area: main;
-    
-    /* padding: 2rem; */
-    /* background-color:thistle; */
+    padding-bottom: 15px;
+    background-color: rgb(153, 153, 153);
 }
 
-nav{
-    grid-area: nav;
-    
-    display: grid;
-    grid-template-areas: 
-    ". . ." 
-    "hamburger navlogo login"
-    ". ul .";
-    grid-template-columns: auto 1fr auto;
-    grid-template-rows:  auto auto auto;
-    width: 100%;
-    top: 0;
-    padding: 1rem 0;
-    position: absolute;
-    z-index: 1000;
-    background-color: whitesmoke;
+.nav-bar img{
+    padding-top: 10px;
 }
-nav ul{ /* esto es mi ul del menu hamburgesa*/
-    display: flex;
-    list-style: none;
-    align-items: center;
-    justify-content: flex-start; 
-    padding: 0 20px;
-    margin: auto;
-}
-nav ul li{
-    display: flex;
-    margin-right: 1rem;
-    margin-left: 1rem;
-    list-style: none;
-    align-items: center;
-}
-nav ul li a{
-    display: flex;
-    margin-right: 1rem;
-    margin-left: 1rem;
-    list-style: none;
-    align-items: center;
-}
-/* nav de las paginas no index*/
-nav.nav2{
-    position: static;
-}
-/*? LISTA DESPLEGABLE  */
-.lista-desplegable{ /* esto es mi lista debajo del logo*/
-    grid-area: ul;
-    
-    display: flex;
-    list-style: none;
-    align-items: center;
-    justify-content: flex-start; 
-    padding: 0 20px;
-    margin: auto;
-}
-.lista-desplegable ul{
-    display: flex;
-    list-style: none;
-    align-items: center;
-    justify-content: flex-start; 
-    padding: 0 20px;
-}
-.lista-desplegable ul li{
-    margin-right: 1rem;
-    margin-left: 1rem;
-}
-.lista-desplegable ul li a {
+
+.nav-bar a{
+    font-size: 20px;
     text-decoration: none;
-    font-size: 1rem;
-    font-weight: 600;
     color: black;
-    transition: all 0.3s ease;
-    position: relative;
 }
-.lista-desplegable ul li a:hover::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px; /* Ajusta este valor para mover la línea hacia arriba o hacia abajo */
-    height: 2px; /* Aumenta este valor para hacer la línea más gruesa */
-    width: 100%;
-    background-color: gold;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade un difuminado a la línea */
+
+.nav-bar #btn-nav:hover{
+    text-decoration: underline 2px #ff9318;
+    cursor: pointer;
 }
-    /*? LOGO */
-.logo-container {
-    grid-area: navlogo;
-    font-size: 1.5rem;
-    display: flex;
-    justify-self: center;
-    align-self: center;
-}
-.navlogo img{
-    background-color:transparent;
+
+.nav-bar #btn-login{
+    border: 3px solid black;
     padding: 5px;
-}
-.navlogo img:hover{
-    transform: scale(1.05);
-    filter: drop-shadow(0px 0px 1px rgb(0, 0, 0, 0.5)); /* Agrega una sombra */
-    transition: transform 0.4s ease, filter 0.6s ease;
+    border-radius: 10px;
 }
 
-.login {
-    grid-area: login;
-    justify-self: end;
-    align-items: center;
+.nav-bar #btn-login:hover{
+    background-color: rgb(255, 149, 0);
+    color: #000000;
+    cursor: pointer
 }
 
-#login-button {
-    background-color: transparent; /* Elimina el color de fondo */
-    position:static;
-    border: none; /* Elimina el borde */
-    font-size: 1.5rem; /* Ajusta el tamaño del texto */
-    color: #000; /* Ajusta el color del texto */
-    cursor: pointer; /* Cambia el cursor a un puntero cuando se pasa por encima*/
-    border-radius: 50%; /* Hace que el botón sea redondo */
-    padding: 10px; /* Añade un poco de espacio alrededor del texto */
-}
-#login-button a:hover {
-    color: goldenrod; /* Cambia el color del texto cuando se pasa por encima */
-    transition: color 0.5s ease;
-}
-#login-button a{
-    height: 100%;
-    width: 100%;
-    font-size: 1rem;
-    padding: 0 2rem;
-    text-decoration: none;
-    color: black; /** es el color del font*/
-}
 
-    /*? CONTENIDO INICIO*/
-.inicio-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        grid-template-areas: "inicio";
-        gap: 0px;
-}
-    
+
 .texto-inicio {
     position: absolute;
     font-family: Louis,Tahoma,NotoSansKR,NanumGothic,sans-serif;
@@ -226,76 +100,6 @@ nav.nav2{
         z-index: 1;
 }
 
-/*? OTRO OVERLAY  */
-.camionetas{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-.camionetas p{
-    font-size: 1.7rem;
-    font-weight: 400;
-    color: #fff;
-}
-.camionetas .item-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    margin-top: 2rem;
-}
-.camionetas .item-container .camioneta-item {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 1rem 3rem;
-    transition: all 0.3s ease;
-}
-.camionetas .item-container .camioneta-item p {
-    font-size: 1.4rem;
-}
-.p-silverado,
-.p-silverado-hd,
-.p-colorado {
-    flex: 1;
-}
-.p-silverado + button,
-.p-silverado-hd + button,
-.p-colorado + button {
-    background-color: transparent;
-    border: none;
-    color: inherit;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-.p-silverado + button:hover,
-.p-silverado-hd + button:hover,
-.p-colorado + button:hover {
-    background-color: green;
-    border: 1px solid black;
-    color: white;
-}
-.vermas-overlay {
-    position: absolute;
-    display: flex;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.5); /* Cambia el último valor para ajustar la transparencia */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-    height: 20%;
-/* para el efecto */
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-}
-
 /*? CARD */
 .card-container {
     display: grid;
@@ -337,52 +141,6 @@ nav.nav2{
 }
 .buttons button {
     padding: 10px 20px;
-}
-
-
-    /*? CARS TAB */
-.cars-tab {
-    background-color: #f5f5f5;
-}
-
-.floating-tab ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 1rem;
-}
-.floating-tab ul li {
-    margin-right: 1rem;
-}
-.floating-images img{
-   max-width: 100%;
-   height: auto;
-}
-.floating-info{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 1rem;
-}
-.floating-buttons{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-}
-
-    /*? NOTICIAS */
-    .noticias h2 {
-        text-align: center;
-    }
-
-.notices-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto auto;
-    gap: 20px;
-    padding: 20px;
 }
 
 /* Sobre Nosotros */
@@ -561,7 +319,10 @@ nav.nav2{
 #footer{ 
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
+    border-top: 5px solid black;
+    padding-bottom: 25px;
+    padding-top: 25px;
 } 
 
  #footer a {
@@ -765,20 +526,6 @@ nav.nav2{
         width: 100%;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     /*? ejemplo de MEDIA QUERYS */
 /** para hacer el layout responsive */
