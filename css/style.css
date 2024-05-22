@@ -527,46 +527,109 @@
     }
 }
 
-    /*? ejemplo de MEDIA QUERYS */
-/** para hacer el layout responsive */
-@media (max-width:1024px) {
-    .grid-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto minmax (5rem,auto) 1fr minmax(5rem, auto) auto;
-        grid-template-areas:
-        "header"
-        "nav"
-        "content"
-        "sidebar" ;
+/* max width 650px */
+
+@media screen and (max-width: 650px){
+    .nav-bar{
+        flex-direction: column;
+        padding-top: 10px;
+    }
+
+    .inicio-container img{
+        width: 650px;
+    }
+
+    .titulo{
+        max-width: 650px;
+        font-size: 10px;
+    }
+
+    .info h2,h3,h4{
+        font-size: 15px;
+    }
+
+    .vehiculos{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .formulario-redirect a{
+        border: 2px solid black;
+        width: 100%;
+        padding: 0;
+    }
+
+    .img-autos{
+        width: 650px;
+        height: 300px;
     }
 }
 
+/* max width 992px */
 
-/*? explicacion media query: estable nuevos estilos cuando el ancho de la pantalla sea inferior a 1024px, solo vamos a ocupar una columna cuando la pantalla sea pequenia, por lo que cambiaremos las "grid-template-columns" en la clase contenedor a 1fr. Luego queremos que cada elemento tenga su propia fila y cada fila tendra diferentes requisitos de tamanio por lo que necesitamos declarar 5 valores en "grid-template-rows". La primer fila es para el 'header' y se configurara en 'auto', que ajustara la altura segun el contenido dentro del 'header'. La segunda fila es para el 'nav' y usa 'minmax' para establecer un valor minimo y maximo. En este caso,el tamanio minimo es 5rem y el maximo auto, lo que le permite al contenedor utilizar todo el espacio que necesita para llenar el contenido de adentro. La tercer columna es para nuestro contenido y utiliza 1fr(que se calcula por cuanto espacio queda sin utilizar en la pagina). y se ajustara dependiendo cuanto contenido haya adentro. La cuarta fila es para nuestro 'sidebar' y */
+@media screen and (max-width: 992px){
+    
+    .inicio-container img{
+        width: 992px;
+    }
 
-@media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto minmax (5rem,auto) 1fr minmax(5rem, auto) auto;
-        grid-template-areas:
-        "header"
-        "nav"
-        "content"
-        "sidebar" ;
+    .titulo{
+        max-width: 992px;
+        font-size: 20px;
+    }
+
+    .info h2,h3,h4{
+        font-size: 15px;
+    }
+
+    .vehiculos{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .formulario-redirect a{
+        border: 2px solid black;
+        width: 100%;
+        padding: 0;
+    }
+
+    .img-autos{
+        width: 650px;
+        height: 300px;
     }
 }
 
+/* min width 1200px */
 
-/*? MEDIA QUERYS */
-/* texto responsive */
-@media (min-width: 600px) {
-    html{
-        font-size: 100%;
+@media screen and (min-width: 1200px){
+    
+    .inicio-container img{
+        min-width: 1200px;
     }
-}
-/* Oculta menú en pantallas de hasta 768px de ancho */
-@media (max-width: 768px) { 
-    nav ul {
-        display: none;
+
+    .titulo{
+        min-width: 1200px;
+        font-size: 20px;
+    }
+
+    .info h2,h3,h4{
+        font-size: 20px;
+    }
+
+    .vehiculos{
+        flex-direction: row;
+        /* justify-content: center;
+        align-items: center; */
+    }
+
+    .formulario-redirect a{
+        border: 2px solid black;
+    }
+
+    .img-autos{
+        width: 1200px;
+        height: 250px;
     }
 }
