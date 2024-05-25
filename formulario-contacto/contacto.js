@@ -35,16 +35,18 @@ const validarFormulario = (e)=>{
 
 const validarCampo = (expresion, input, campo)=>{
     if(expresion.test (input.value)){
-        document.getElementById(`${campo}`).classList.remove('.form-control-incorrecto');
-        document.getElementById(`${campo}`).classList.add('.form-control-correcto');
+        document.getElementById(`${campo}`).classList.remove('form-control-incorrecto');
+        document.getElementById(`${campo}`).classList.add('form-control-correcto');
         document.querySelector(`#${campo} i`).classList.add('fa-circle-check');
         document.querySelector(`#${campo} i`).classList.remove('fa-circle-xmark');
+        document.querySelector(`#error-${campo}.form-control-error`).classList.remove('form-control-error-activo');
         campos[campo] = true;
     } else {
-        document.getElementById(`${campo}`).classList.add('.form-control-incorrecto'); 
-        document.getElementById(`${campo}`).classList.remove('.form-control-correcto');
+        document.getElementById(`${campo}`).classList.add('form-control-incorrecto'); 
+        document.getElementById(`${campo}`).classList.remove('form-control-correcto');
         document.querySelector(`#${campo} i`).classList.remove('fa-circle-check');
         document.querySelector(`#${campo} i`).classList.add('fa-circle-xmark');
+        document.querySelector(`#error-${campo}.form-control-error`).classList.add('form-control-error-activo');
         campos[campo] = false;
     }
 }

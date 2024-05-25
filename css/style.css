@@ -338,7 +338,7 @@
     align-items: center;
     border: 2px solid rgb(255, 193, 7);
     border-radius: 25px;
-    box-shadow: 3px 0 20px rgb(154, 168, 168);
+    box-shadow: 3px 0 20px black;
     padding-top: 10px;
 }
 
@@ -407,8 +407,10 @@
 
 .form-control-input {
     width: 100%;
-    border: 4px solid rgb(255, 193, 7);
+    background-color: black;
+    border: 2px solid rgb(255, 193, 7);
     border-radius: 25px;
+    color: white;
     height: 45px;
     line-height: 45px;
     padding: 0 40px 0 10px;
@@ -425,8 +427,10 @@
 .form-control-coment {
     position: relative;
     width: 100%;
-    border: 4px solid rgb(255, 193, 7);
+    background-color: black;
+    border: 2px solid rgb(255, 193, 7);
     border-radius: 25px;
+    color: white;
     height: 150px;
     line-height: 45px;
     padding: 0 40px 0 10px;
@@ -443,6 +447,7 @@
     font-size: 12px;
     margin-bottom: 0;
     display: none;
+    color: red;
 }
 
 .form-control-error-activo {
@@ -451,7 +456,7 @@
 
 .form-control-model {
     background-color: black;
-    border: 4px solid rgb(255, 193, 7);
+    border: 2px solid rgb(255, 193, 7);
     border-radius: 25px;
     color: white;
     cursor: pointer;
@@ -459,9 +464,11 @@
 }
 
 .form-control-select {
-    border: 3px solid rgb(255, 193, 7);
+    background-color: black;
+    border: 2px solid rgb(255, 193, 7);
     border-radius: 25px;
     cursor: pointer;
+    color: white;
 }
 
 .form-control-select:focus {
@@ -471,7 +478,7 @@
 }
 
 .form-control-img {
-    border: 4px solid rgb(255, 193, 7);
+    border: 2px solid rgb(255, 193, 7);
     border-radius: 25px;
     color: white;
     cursor: pointer;
@@ -535,16 +542,16 @@
     display: block;
 }
 
-.form-control-correcto.form-control-validacion {
-    color: blue;
+.form-control-correcto .form-control-validacion {
+    color: green;
     opacity: 1;
 }
 
-.form-control-incorrecto.form-control-input {
+.form-control-incorrecto .form-control-input {
     border: 3px solid red;
 }
 
-.form-control-incorrecto.form-control-validacion {
+.form-control-incorrecto .form-control-validacion {
     color: red;
     opacity: 1;
 }
