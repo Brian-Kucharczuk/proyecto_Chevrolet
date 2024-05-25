@@ -103,8 +103,6 @@
 }
 
 .card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(1fr));
     gap: 20px;
     padding: 20px;
 }
@@ -200,7 +198,7 @@
     align-items: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-weight: 1500;
+    font-weight: 900;
     text-decoration: underline 3px rgba(255, 209, 27, 0.922);
 }
 
@@ -231,11 +229,17 @@
 }
 
 .card1 p {
-    margin-bottom: 3rem;
+   
+    margin-bottom: 1rem;
 }
 
 .card1 img {
     width: 100%;
+}
+.card1 .btn{
+   
+    margin-top: 6rem;
+   
 }
 
 .card .btn {
@@ -356,7 +360,7 @@
 
 #footer a {
     color: black;
-    font-weight: 1200;
+    font-weight: 900;
     cursor: pointer;
     font-size: 18px;
     padding-left: 15px;
@@ -388,6 +392,7 @@
 .icons {
     display: flex;
     flex-direction: row;
+    margin-bottom: 2rem;
 }
 
 .formulario {
@@ -545,15 +550,6 @@
 }
 
 @media (min-width:1024px) {
-   .grid-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto minmax (5rem, auto) 1fr minmax(5rem, auto) auto;
-        grid-template-areas:
-            "header"
-            "nav"
-            "content"
-            "sidebar"
-    }
 
     .nav-bar img {
         width: 50%;
@@ -600,7 +596,7 @@
     }
 
     .card1 p {
-        margin-bottom: 7rem;
+        margin-bottom: 5rem;
     }
 
     .titulo2 h1 {
@@ -640,15 +636,6 @@
 
 
 @media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto minmax (5rem, auto) 1fr minmax(5rem, auto) auto;
-        grid-template-areas:
-            "header"
-            "nav"
-            "content"
-            "sidebar";
-    }
 
     .nav-bar img {
         width: 60%;
@@ -694,12 +681,15 @@
     }
 
     .card1 {
-        padding-top: 3rem;
+        padding-top:2rem;
+    }
 
+    .card1 .btn-primary{
+        margin-top: 0;
     }
 
     .card1 p {
-        margin-bottom: 0;
+        padding-bottom: 0;
     }
 
     .card2 {
@@ -709,7 +699,7 @@
     .card2 .card-title {
         padding-top: 9%;
     }
-
+    
     .card2 img {
         width: 80%
     }
@@ -812,16 +802,6 @@
 }
 
 @media (max-width: 576px) {
-
-     .grid-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto minmax (5rem, auto) 1fr minmax(5rem, auto) auto;
-        grid-template-areas:
-            "header"
-            "nav"
-            "content"
-            "sidebar";
-    }
 
     .nav-bar img {
         width: 60%;
