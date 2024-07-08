@@ -108,7 +108,9 @@ table {
 .marg-sup{
     margin-top: 0;
 }
-
+.marg-sup-menu{
+    margin-top: 5%;
+}
 th, td {
     padding-left: 10px;
     padding-right: 10px;
