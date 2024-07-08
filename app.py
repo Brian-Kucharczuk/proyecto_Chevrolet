@@ -131,10 +131,14 @@ class Catalogo:
 # -------------------------------------------------------------------
 # Cuerpo del programa
 # -------------------------------------------------------------------
-catalogo = Catalogo(host='localhost', user='root', password='root', database='proyecto_Chevrolet_crud')
+# catalogo = Catalogo(host='localhost', user='root', password='root', database='proyecto_Chevrolet_crud')
+catalogo = Catalogo(host='constanza06.mysql.pythonanywhere-services.com', user='constanza06', password='puchitril', database='constanza06$proyecto_Chevrolet_crud')
+
 
 # Carpeta para guardar las imagenes.
-RUTA_DESTINO = './static/imagenes/'
+# RUTA_DESTINO = './static/imagenes/'
+
+RUTA_DESTINO = '/home/constanza06/mysite/static/imagenes'
 
 
 #--------------------------------------------------------------------
