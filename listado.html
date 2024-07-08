@@ -44,10 +44,10 @@
     </div>
 
     <script>
-        const URL = "http://127.0.0.1:5000/"
+        //const URL = "http://127.0.0.1:5000/"
 
         // Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
-        //const URL = "https://USUARIO.pythonanywhere.com/"
+        const URL = "https://constanza06.pythonanywhere.com/"
         
 
         // Realizamos la solicitud GET al servidor para obtener todos los vehiculos.
@@ -74,10 +74,10 @@
                         '<td align="right">' + vehiculo.cantidad + '</td>' +
                         '<td align="right">' + vehiculo.precio + '</td>' + '<td align="right">' + vehiculo.color + '</td>' + '<td align="right">' + vehiculo.puertas + '</td>'+
                         // Mostrar miniatura de la imagen
-                        '<td><img src= ./static/imagenes/' + vehiculo.imagen_url +' alt="Imagen del vehiculo" style="width: 100px;"></td>';
+                        //'<td><img src= ./static/imagenes/' + vehiculo.imagen_url +' alt="Imagen del vehiculo" style="width: 100px;"></td>';
                         
                         //Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
-                        //'<td><img src=https://www.pythonanywhere.com/user/USUARIO/files/home/USUARIO/mysite/static/imagenes/' + vehiculo.imagen_url +' alt="Imagen del vehiculo" style="width: 100px;"></td>' + '<td align="right">' + vehiculo.puertas + '</td>';
+                        '<td><img src=https://www.pythonanywhere.com/user/constanza06/files/home/constanza06/mysite/static/imagenes/' + vehiculo.imagen_url +' alt="Imagen del vehiculo" style="width: 100px;"></td>' + '<td align="right">' + vehiculo.puertas + '</td>';
                     
                     //Una vez que se crea la fila con el contenido del vehiculo, se agrega a la tabla utilizando el método appendChild del elemento tablaVehiculos.
                     tablaVehiculos.appendChild(fila);
