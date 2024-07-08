@@ -22,6 +22,7 @@
 
 .nav-bar a {
     font-size: 20px;
+    font-weight: 800;
     text-decoration: none;
     color: rgba(40, 39, 39, 0.731);
 }
@@ -42,6 +43,7 @@
     color: #000000;
     cursor: pointer
 }
+
 
 .texto-inicio {
     position: absolute;
@@ -162,7 +164,8 @@
 
 .historia {
     padding-top: 10px;
-    padding-left: 10px;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 .historia p {
@@ -170,8 +173,10 @@
     padding: 10px;
 }
 
-.vehiculo-subtitulo {
+.descripcion-subtitulo {
     padding: 15px;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 .autos {
@@ -198,6 +203,8 @@
     align-items: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    padding-left: 3%;
+    padding-right: 3%;
     font-weight: 900;
     text-decoration: underline 3px rgba(255, 209, 27, 0.922);
 }
@@ -253,8 +260,9 @@
 
 .titulo2 h1 {
     display: flex;
-    font-size: 60px;
+    font-size: 35px;
     box-shadow: rgba(255, 209, 27, 0.922) 0px 5px 15px;
+    padding-left: 3%;
 }
 
 .img-autos {
@@ -280,11 +288,15 @@
 
 .info-autos {
     display: flex;
+    padding-left: 3%;
+    padding-right: 3%;
+    font-size: 10%;
 }
 
 .info {
     padding: 10px;
-    font-size: 25px;
+    padding-left: 5%;
+    font-size: 20px;
 }
 
 .info h2 {
@@ -315,6 +327,9 @@
     max-width: 350px;
 }
 
+.marg-inf{
+    margin-bottom: 5%
+}
 .formulario-redirect {
     display: flex;
     justify-content: center;
@@ -556,6 +571,13 @@
     opacity: 1;
 }
 
+.contenedor-centrado {
+    display:flex;
+    width: 100%;
+    justify-content: center;
+}
+
+
 @media (min-width:1024px) {
     .nav-bar img {
         width: 50%;
@@ -606,7 +628,7 @@
     }
 
     .titulo2 h1 {
-        font-size: 50px;
+        font-size: 40px;
     }
 
     .info .h3 {
@@ -682,7 +704,7 @@
         margin-top: 1rem;
     }
 
-    .vehiculo-subtitulo h2 {
+    .descripcion-subtitulo h2 {
         text-align: center
     }
 
@@ -848,7 +870,7 @@
         width: 100%;
     }
 
-    .vehiculo-subtitulo h2 {
+    .descripcion-subtitulo h2 {
         text-align: center
     }
 
@@ -861,10 +883,17 @@
         text-align: center;
     }
 
+
+    .titulo2 h1{
+        padding-left: 6%;
+        padding-right: 6%;
+    }
     .info h4 {
         font-size: 0.8em;
         text-align: center;
     }
+
+    
 
     .formulario-redirect {
         display: flex;
